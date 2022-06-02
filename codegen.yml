@@ -1,7 +1,9 @@
 schema: schema.graphql
-documents: document.graphql
 generates:
   types.ts:
+    config:
+      useIndexSignature: true
+      federation: true
     plugins:
       - typescript
-      - typescript-operations
+      - typescript-resolvers
